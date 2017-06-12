@@ -105,8 +105,8 @@ To train the model, I used an Adam optimizer.
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* validation set accuracy of 0.947 
-* test set accuracy of 0.929
+* validation set accuracy of 0.953 
+* test set accuracy of 0.936
 
 If an iterative approach was chosen:
 * I have adapted the lenet from the lenet lab.
@@ -140,4 +140,4 @@ The top 5 softmax probabilities are given as:
 * Top five:  TopKV2(values=array([[ 0.64425236,  0.12954569,  0.08598296,  0.05502813,  0.05331091]], dtype=float32), indices=array([[ 0,  1, 40,  6,  8]]))
 
 I see that all probabilities are so high except of the speed limit 40 sign because there is no true label for that and it is assigned to the closest one. 
-The accuracy on the captured images is 100% while it was 93% on the testing set thus It seems the model is underfitting.
+The accuracy on the captured images is 100% while it was 93.6% on the testing set thus It seems the model is underfitting.
