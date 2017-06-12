@@ -138,5 +138,6 @@ The top 5 softmax probabilities are given as:
 * Top five:  TopKV2(values=array([[  9.99997139e-01,   1.76795936e-06,   2.72849235e-07, 1.36836675e-07,   1.35440615e-07]], dtype=float32), indices=array([[13, 15, 12, 35,  3]]))
 * Top five:  TopKV2(values=array([[ 0.15786375,  0.13445772,  0.12347692,  0.05046315,  0.04843397]], dtype=float32), indices=array([[ 3, 38, 12,  9, 10]]))
 * Top five:  TopKV2(values=array([[ 0.64425236,  0.12954569,  0.08598296,  0.05502813,  0.05331091]], dtype=float32), indices=array([[ 0,  1, 40,  6,  8]]))
+
 I see that all probabilities are so high except of the speed limit 40 sign because there is no true label for that and it is assigned to the closest one. 
 The accuracy on the captured images is 100% while it was 93% on the testing set thus It seems the model is underfitting.
