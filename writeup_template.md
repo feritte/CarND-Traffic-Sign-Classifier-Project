@@ -134,4 +134,4 @@ It didnt work well on these images because they are extremely cut. The model was
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 When I check the top 5 softmax probabilities. I see that all are so small. I need to further investigate this with better quality images. 
-
+The accuracy on the captured images is 0% while it was 93% on the testing set thus It seems the model is overfitting. I need to use drobouts in a more efficient way and also I should extend the training data set with other trtaffic sign images to prevent overfitting
