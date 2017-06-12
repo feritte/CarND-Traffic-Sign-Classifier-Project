@@ -129,9 +129,14 @@ Here are five German traffic signs that I found on the web:
 
 ![alt text][image4] 
 
-It didnt work well on these images because they are extremely cut. The model was not able to correctly guess any of the 5 traffic signs.
-
+I obtained 100 % accuracy. Only the speed limit 40 sign I labeled it as 60 because there is no defined label for this.  
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-When I check the top 5 softmax probabilities. I see that all are so small. I need to further investigate this with better quality images. 
-The accuracy on the captured images is 0% while it was 93% on the testing set thus It seems the model is overfitting. I need to use drobouts in a more efficient way and also I should extend the training data set with other trtaffic sign images to prevent overfitting
+The top 5 softmax probabilities are given as:
+* Top five:  TopKV2(values=array([[  9.85944390e-01,   7.15442793e-03,   2.10586167e-03, 1.16283540e-03,   6.79316465e-04]], dtype=float32), indices=array([[37, 40, 26, 20, 17]]))
+* Top five:  TopKV2(values=array([[  9.99999762e-01,   9.45029157e-08,   6.50893668e-08, 9.58167412e-09,   9.02625175e-09]], dtype=float32), indices=array([[12, 40, 35, 38, 17]]))
+* Top five:  TopKV2(values=array([[  9.99997139e-01,   1.76795936e-06,   2.72849235e-07, 1.36836675e-07,   1.35440615e-07]], dtype=float32), indices=array([[13, 15, 12, 35,  3]]))
+* Top five:  TopKV2(values=array([[ 0.15786375,  0.13445772,  0.12347692,  0.05046315,  0.04843397]], dtype=float32), indices=array([[ 3, 38, 12,  9, 10]]))
+* Top five:  TopKV2(values=array([[ 0.64425236,  0.12954569,  0.08598296,  0.05502813,  0.05331091]], dtype=float32), indices=array([[ 0,  1, 40,  6,  8]]))
+I see that all probabilities are so high except of the speed limit 40 sign because there is no true label for that and it is assigned to the closest one. 
+The accuracy on the captured images is 100% while it was 93% on the testing set thus It seems the model is underfitting.
